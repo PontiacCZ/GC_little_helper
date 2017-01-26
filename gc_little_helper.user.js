@@ -2900,7 +2900,7 @@ var mainGC = function () {
                 if (founds == 0) {
                     friend.getElementsByTagName("dd")[4].innerHTML = founds + "&nbsp;";
                 } else {
-                    friend.getElementsByTagName("dd")[4].innerHTML = "<a href='/seek/nearest.aspx?ul=" + urlencode(name.innerHTML) + "&disable_redirect'>" + founds + "</a>&nbsp;" + add;
+                    friend.getElementsByTagName("dd")[4].innerHTML = "<a href='/seek/nearest.aspx?ul=" + urlencode(name.innerHTML) + "'>" + founds + "</a>&nbsp;" + add;
                 }
 
 
@@ -2916,7 +2916,7 @@ var mainGC = function () {
                 if (hides == 0) {
                     friend.getElementsByTagName("dd")[5].innerHTML = hides + "&nbsp;";
                 } else {
-                    friend.getElementsByTagName("dd")[5].innerHTML = "<a href='/seek/nearest.aspx?u=" + urlencode(name.innerHTML) + "&disable_redirect'>" + hides + "</a>&nbsp;" + add;
+                    friend.getElementsByTagName("dd")[5].innerHTML = "<a href='/seek/nearest.aspx?u=" + urlencode(name.innerHTML) + "'>" + hides + "</a>&nbsp;" + add;
                 }
 
 
@@ -2943,12 +2943,12 @@ var mainGC = function () {
                     founds = getValue("friends_founds_new_" + name.innerHTML, 0);
                     setValue("friends_founds_" + name.innerHTML, founds);
                     if (founds == 0) friend.getElementsByTagName("dd")[4].innerHTML = "0&nbsp;";
-                    else friend.getElementsByTagName("dd")[4].innerHTML = "<a href='/seek/nearest.aspx?ul=" + urlencode(name.innerHTML) + "&disable_redirect'>" + founds + "</a>";
+                    else friend.getElementsByTagName("dd")[4].innerHTML = "<a href='/seek/nearest.aspx?ul=" + urlencode(name.innerHTML) + "'>" + founds + "</a>";
 
                     hides = getValue("friends_hides_new_" + name.innerHTML, 0);
                     setValue("friends_hides_" + name.innerHTML, hides);
                     if (hides == 0) friend.getElementsByTagName("dd")[5].innerHTML = "0&nbsp;";
-                    else friend.getElementsByTagName("dd")[5].innerHTML = "<a href='/seek/nearest.aspx?u=" + urlencode(name.innerHTML) + "&disable_redirect'>" + hides + "</a>&nbsp;";
+                    else friend.getElementsByTagName("dd")[5].innerHTML = "<a href='/seek/nearest.aspx?u=" + urlencode(name.innerHTML) + "'>" + hides + "</a>&nbsp;";
                 }
             }
 
@@ -5988,7 +5988,7 @@ var mainGC = function () {
         // Redirect to Neares List/Map
         function linkToNearesList() {
             if (homeCoordinatesSet()) {
-                document.location.href = http + "://www.geocaching.com/seek/nearest.aspx?lat=" + (getValue("home_lat") / 10000000) + "&lng=" + (getValue("home_lng") / 10000000) + "&dist=25&disable_redirect";
+                document.location.href = http + "://www.geocaching.com/seek/nearest.aspx?lat=" + (getValue("home_lat") / 10000000) + "&lng=" + (getValue("home_lng") / 10000000) + "&dist=25";
             }
         }
 
@@ -6005,7 +6005,7 @@ var mainGC = function () {
         // Redirect to Neares List without Founds
         function linkToNearesListWo() {
             if (homeCoordinatesSet()) {
-                document.location.href = http + "://www.geocaching.com/seek/nearest.aspx?lat=" + (getValue("home_lat") / 10000000) + "&lng=" + (getValue("home_lng") / 10000000) + "&dist=25&f=1&disable_redirect";
+                document.location.href = http + "://www.geocaching.com/seek/nearest.aspx?lat=" + (getValue("home_lat") / 10000000) + "&lng=" + (getValue("home_lng") / 10000000) + "&dist=25&f=1";
             }
         }
 
